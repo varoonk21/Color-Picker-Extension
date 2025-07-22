@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Picker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="color-picker-container">
+    <div class="top-bar">
+      <div class="logo-section">
+        <img src="/images/icon-32.png" alt="Logo" class="logo" />
+        <span class="title">Color Picker</span>
+      </div>
+      <button id="pick-color-btn" class="pick-btn" title="Pick a color from screen">Pick</button>
+    </div>
+
+    <h3 class="label">Selected Color</h3>
+
+    <div class="color-box">
+      <div id="preview-box" class="color-spectrum"></div>
+    </div>
+
+    <div class="color-input-group">
+      <select id="format-selector" class="format-select">
+        <option value="hex">HEX</option>
+        <option value="rgb">RGB</option>
+      </select>
+      <input id="color-input" type="text" class="color-input" value="#AABBCC" />
+      <button id="copy-btn" class="copy-btn" title="Copy color to clipboard">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 9V6.2C9 5.08 9 4.52 9.218 4.092C9.41 3.715 9.715 3.41 10.092 3.218C10.52 3 11.08 3 12.2 3H17.8C18.92 3 19.48 3 19.908 3.218C20.284 3.41 20.59 3.715 20.782 4.092C21 4.52 21 5.08 21 6.2V11.8C21 12.92 21 13.48 20.782 13.908C20.59 14.284 20.284 14.59 19.908 14.782C19.48 15 18.921 15 17.803 15H15M9 9H6.2C5.08 9 4.52 9 4.092 9.218C3.715 9.41 3.41 9.715 3.218 10.092C3 10.52 3 11.08 3 12.2V17.8C3 18.92 3 19.48 3.218 19.908C3.41 20.284 3.715 20.59 4.092 20.782C4.519 21 5.079 21 6.197 21H11.804C12.921 21 13.481 21 13.908 20.782C14.284 20.59 14.59 20.284 14.782 19.908C15 19.48 15 18.921 15 17.803V15M9 9H11.8C12.92 9 13.48 9 13.908 9.218C14.284 9.41 14.59 9.715 14.782 10.092C15 10.519 15 11.079 15 12.197V15" 
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="recent-colors-section">
+      <div class="tags">
+        <h3 class="recent-label">Recent</h3>
+        <h3 id="clear-btn" class="clear-btn">Clear All</h3>
+      </div>
+      <div class="recent-colors"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script> 
+</body>
+</html>
